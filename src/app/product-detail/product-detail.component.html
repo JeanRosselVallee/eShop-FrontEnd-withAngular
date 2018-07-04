@@ -1,0 +1,9 @@
+<div *ngIf="product != null">
+  <h2>{{product.title}}</h2>
+  <img src="{{product.url}}" />
+  <p>TVA: {{product.tva}}</p>
+</div>
+
+<div *ngIf="product == null">
+  <p>Ce produit n'existe pas ou est indisponible</p>
+</div>

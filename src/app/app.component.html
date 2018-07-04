@@ -1,0 +1,39 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+  
+  <!--header-->
+  <h1>My online Shop
+  </h1>
+
+
+
+  <!--menu-->
+  <nav  ng-controller="checkIsAdmin">
+    <ul>
+      <li><a routerLink="home">         Home</a></li>
+      <li><a routerLink="catalog">      Catalog</a></li>
+      <li><a routerLink="cart">         Cart</a></li>
+      <li><a routerLink="login">        Login:[isAdmin:{{isAdmin}}]</a></li>
+      <li>        User:[name:{{currentUserName}}]</li>
+      
+  <!--menu for Administration only-->
+  <!--li *ngIf="isAdmin"-->
+      <li *ngIf="isAdmin=='true'">    
+        <a routerLink="admin/catalog">  Admin Catalog </a>
+      </li>            
+    </ul>
+  </nav>
+
+
+  <router-outlet></router-outlet>
+
+<!--footer-->
+  <ul>
+    <li>A propos </li>
+    <li>Contact</li>
+  </ul>
+
+
+
+
+
