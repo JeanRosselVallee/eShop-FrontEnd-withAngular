@@ -1,27 +1,49 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<div>    
+        <table  id="menu"> 
+            <tr id="banner">
+                <td width=25%>
+                    <h1> S c h u s s </h1>
 
-  
-  <!--header-->
-  <h1>My online Shop
-  </h1>
+                    <h3> Hello {{currentUserName}} ! </h3>
+
+                    <div class="alert" *ngIf="isAdmin=='true'"> 
+                        admin zone  
+                    </div>
+                </td>
+
+                <td id="title">
+                </td>
+            </tr>
+            <tr> 
+                <td>
+                    <a id="login" routerLink="login">  
+                        <img 
+                            src="http://www.gpwebsolutions-host.co.uk/27799/files/2014/11/Staff-Login.jpg" 
+                            width=100%
+                            alt="Login"
+                        >
+                    </a>
+                </td>
+                <td>
+                    <div>
+                        <div class="viewByAll" *ngIf="isAdmin!='true'">                    
+                                <a routerLink="catalog"><button>Catalog </button></a>
+                                <a routerLink="cart">   <button>Cart    </button></a>
+                                <a routerLink="cart">   <button>Account </button></a>
+                        </div>
+                        <div class="viewByAdmin" *ngIf="isAdmin=='true'">  
+                                <a routerLink="admin/catalog"><button>  Admin Catalog </button></a>
+                                <a routerLink="admin/carts">  <button>  Admin Carts </button></a>
+                                <a routerLink="admin/users">  <button>  All Users </button></a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+</div>
 
 
-
-  <!--menu-->
-  <nav  ng-controller="checkIsAdmin">
-    <ul>
-      <li><a routerLink="home">         Home</a></li>
-      <li><a routerLink="catalog">      Catalog</a></li>
-      <li><a routerLink="cart">         Cart</a></li>
-      <li><a routerLink="login">        Login:[isAdmin:{{isAdmin}}]</a></li>
-      <li>        User:[name:{{currentUserName}}]</li>
-      
-  <!--menu for Administration only-->
-  <!--li *ngIf="isAdmin"-->
-      <li *ngIf="isAdmin=='true'">    
-        <a routerLink="admin/catalog">  Admin Catalog </a>
-      </li>            
-    </ul>
+  <nav  ng-controller="checkIsAdmin">    
   </nav>
 
 
@@ -29,8 +51,8 @@
 
 <!--footer-->
   <ul>
-    <li>A propos </li>
-    <li>Contact</li>
+    A propos 
+    Contact
   </ul>
 
 
