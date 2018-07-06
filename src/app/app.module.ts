@@ -67,6 +67,11 @@ import { UserComponent } from './user/user.component';
           path: "login",
           component: UserComponent,
           pathMatch: 'full'
+        },
+        {
+          path: "admin/users",
+          component: UserComponent,
+          pathMatch: 'full'
         }
       ],
       {

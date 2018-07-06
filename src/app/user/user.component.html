@@ -12,14 +12,8 @@
 </a>
 
 
-<!--div  class="user"
-      *ngFor="let product of catalog">
-  <p>
-    {{product.title}} <button (click)="delProductHandler(product)">X</button>
-  </p>
-</div>
 <div  class="user" 
-    *ngFor="let data of users">
+    *ngFor="let data of catalog">
 
   <h2>{{data.id}}</h2>
 
@@ -32,4 +26,4 @@
   {{data.name}}
   <button (click)="delCartHandler(data)">Remove From Cart</button>
 
-</div-->
+</div>

@@ -102,7 +102,7 @@ export class UserService {
     );
   }
 
-  public getUsers(): Observable<User[]> {
+  public getUsers(): Observable<Array<User>> {
     let options: RequestOptions = new RequestOptions();
     options.params = new URLSearchParams();
 
@@ -111,11 +111,14 @@ export class UserService {
     } else {
       options.params.set("apikey", this.currentUser.apikey);
     }
+    // Debug : check values of sent parameters
+    // console.warn ("getUsers():options.params %o", options.params );
 
     return this.service.get(environment.getUsersUrl, options)
                         .map(
-                          (rep: Response): User[] => {
-                            return rep.json() as User[];
+                          (rep: Response): Array<User> => {
+                            console.warn ("getUsers():rep.json() %o", rep.json() );
+                            return rep.json() as Array<User>;
                           }
                         );
   }

@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-
+  public catalog: Array<User>;
   private service:UserService;
   private service2:CartService;
   public user:User;
@@ -51,6 +51,19 @@ export class UserComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    if  ( sessionStorage.getItem("apikey") != "null" &&
+          sessionStorage.getItem("user_id") != "null"
+        )
+    {
+      this.service.getUsers().subscribe
+      (
+        ( p_users: Array<User> ) =>
+          {
+            this.catalog = p_users;
+          }
+      );
+    }
   }
 
 }

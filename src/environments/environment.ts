@@ -1,7 +1,8 @@
 
 export const environment = {
   production: false,
-  getCatalogURL:  "http://localhost:8080/products",
+  //getCatalogURL:  "http://localhost:8080/products",
+  getCatalogURL:  "http://192.168.134.113:8080/products",
   postCatalogURL: "http://localhost:8080/products/add",
   delCatalogURL:  "http://localhost:8080/products/rem",
   postCartURL:    "http://localhost:8080/carts/add-product",
