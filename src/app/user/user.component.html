@@ -1,29 +1,64 @@
-<label>Email: </label>
-<input [(ngModel)]="user.email" />
-<br/>
-
-<label>Password: </label>
-<input [(ngModel)]="user.password" />
-<br/>
-<a routerLink="/catalog">
-  <button (click)="loginHandler(user)" >
-        Submit
-  </button>
-</a>
-
-
-<div  class="user" 
-    *ngFor="let data of catalog">
-
-  <h2>{{data.id}}</h2>
-
-  <p>admin: {{data.admin}}€</p>
-  <p>apikey: {{data.apikey}}€</p>
-  <p>email: {{data.email}}€</p>
-  <p>name: {{data.name}}€</p>
-  <p>name: {{data.password}}€</p>
-
-  {{data.name}}
-  <button (click)="delCartHandler(data)">Remove From Cart</button>
-
-</div>
+<table id="login">
+    <tr>
+        <td> 
+            <tr>
+                <td>
+                    E-mail  : 
+                  </td>
+                  <td>
+                    <input [(ngModel)]="user.email" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    <input [(ngModel)]="user.password" />
+                </td>
+            </tr>
+        </td>
+        <td>
+            <a routerLink="/catalog">
+                <button (click)="loginHandler(user)" >
+                    <img
+                        src="https://t3.ftcdn.net/jpg/00/31/32/06/500_F_31320699_UcSaUXDKycDWMjrYF3pPq7wGbwbmNZXi.jpg"    
+                        alt="Submit"
+                        width=60px
+                    >
+                </button>
+            </a>
+        </td>
+    </tr>    
+</table>
+<br>
+<br>
+<table id="userTable">
+    <tr id="tableHeader">
+            <th>id       </th>
+            <th>isAdmin  </th>
+            <th>apikey   </th>
+            <th>e-mail   </th>
+            <th>name     </th>
+            <th>password </th>
+            <th>Delete   </th>
+    </tr>
+    <tr class="tableData" 
+        *ngFor="let data of catalog">
+          <td>  {{data.id}}       </td>
+          <td>  {{data.admin}}    </td>
+          <td>  {{data.apikey}}   </td>
+          <td>  {{data.email}}    </td>
+          <td>  {{data.name}}     </td>
+          <td>  {{data.password}} </td>
+          <td>
+              <button (click)="delCartHandler(data)">
+                  <img 
+                      src="https://previews.123rf.com/images/vectora/vectora1510/vectora151000234/46523483-red-cross-graphics-remove-delete-button-icon-editable-vector.jpg" 
+                      alt="X"
+                      width=20px
+                  />
+              </button>
+          </td>
+    </tr>
+</table>

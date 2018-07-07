@@ -1,6 +1,6 @@
 <div>    
-        <table  id="menu"> 
-            <tr id="banner">
+        <table id="freeze"> 
+            <tr class="highlight">
                 <td width=25%>
                     <h1> S c h u s s </h1>
 
@@ -11,25 +11,58 @@
                     </div>
                 </td>
 
-                <td id="title">
+                <td class="repeatImage">
                 </td>
             </tr>
             <tr> 
-                <td>
-                    <a id="login" routerLink="login">  
-                        <img 
-                            src="http://www.gpwebsolutions-host.co.uk/27799/files/2014/11/Staff-Login.jpg" 
-                            width=100%
-                            alt="Login"
-                        >
-                    </a>
+                <td  class="menu">
+                        <a routerLink="login">  
+                                <img 
+                                        id="login" 
+                                        src="http://www.gpwebsolutions-host.co.uk/27799/files/2014/11/Staff-Login.jpg" 
+                                        alt="Login"
+                                >
+                        </a>
                 </td>
                 <td>
-                    <div>
-                        <div class="viewByAll" *ngIf="isAdmin!='true'">                    
-                                <a routerLink="catalog"><button>Catalog </button></a>
-                                <a routerLink="cart">   <button>Cart    </button></a>
-                                <a routerLink="cart">   <button>Account </button></a>
+                    <div class="menu">
+                        <div class="viewByAll" *ngIf="isAdmin!='true'"> 
+                                <td>
+                                    <a routerLink="user">
+                                            <button> 
+                                                    <h3>My Account</h3>
+                                                    <img 
+                                                            src=    "https://pittsburghskiclub.org/images/icons/people.png" 
+                                                            alt=    "User account"
+                                                            title=  "My Account"                                                      
+                                                    >
+                                            </button>
+                                        </a>
+                                </td>     
+                                <td>
+                                        <a routerLink="cart">
+                                                <button> 
+                                                        <h3>My Cart</h3>
+                                                        <img 
+                                                                src=    "https://image.shutterstock.com/image-photo/shopping-cart-icon-260nw-106825802.jpg" 
+                                                                alt=    "User Cart"
+                                                                title=  "My Cart"
+                                                        >
+                                                </button>
+                                        </a>
+                                </td>              
+                                <td>
+                                        <a routerLink="catalog">
+                                                <button> 
+                                                        <h3>Full Catalog</h3>
+                                                        <img 
+                                                                src=    "https://www.freeiconspng.com/uploads/product-catalog-icon-15.jpg" 
+                                                                alt=    "Products Catalog" 
+                                                                title=  "Catalog"                                                   
+                                                        >
+                                                </button>
+                                        </a>
+                                </td>
                         </div>
                         <div class="viewByAdmin" *ngIf="isAdmin=='true'">  
                                 <a routerLink="admin/catalog"><button>  Admin Catalog </button></a>
@@ -39,15 +72,19 @@
                     </div>
                 </td>
             </tr>
+            <tr class="highlight">                
+                <td class="repeatImage">.</td>
+                <td class="repeatImage">.</td>
+            </tr>
         </table>
 </div>
 
+<!--nav  ng-controller="checkIsAdmin">    
+</nav-->
 
-  <nav  ng-controller="checkIsAdmin">    
-  </nav>
-
-
+<div id="content">
   <router-outlet></router-outlet>
+</div>
 
 <!--footer-->
   <ul>

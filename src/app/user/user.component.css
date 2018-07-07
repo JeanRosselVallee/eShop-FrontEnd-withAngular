@@ -1,0 +1,22 @@
+#login
+{
+    text-align: left;
+    background: linear-gradient(white, lightblue);
+}
+
+userTable
+{
+    width: 100%;    
+}
+
+tableHeader 
+{
+    font-weight: bold;
+    background-color: green;
+}
+
+#tableData.td, th
+{
+    width: auto;
+    border: 1px solid black;
+}

@@ -1,16 +1,23 @@
-#menu
+#freeze
 {
-    color:lightcyan;
-    background-color:  lightgray;
+    position: fixed;
+    top: 0;
+    width: 100%
 }
 
-#banner
+.menu
+{
+    background-color:  white;
+    align-items: center; 
+}
+
+.highlight
 {
     color:yellow;
     background-color:  black;
 }
 
-#title
+.repeatImage
 {
     background:url("https://fortunedotcom.files.wordpress.com/2016/07/gettyimages-487818429.jpg"); 
     background-repeat:  repeat-x;
@@ -34,11 +41,26 @@
 }
 
 a{      
-    width: 33%;
+    width: 75%;
     display: inline-block;
 }
 
+button
+{
+    height: 100%;
+    max-height: 100px;
+    display: inline-flex;
+    align-items: center; 
+    justify-content: space-around }
+
 img
 {
-    background-color:  black;
+    width: 50%;
+    max-height: 90px;
 }
+
+#content
+{
+    padding-top: 250px;
+}
+
