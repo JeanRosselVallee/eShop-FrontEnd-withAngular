@@ -1,12 +1,31 @@
+#frozenTable
+{
+    position: fixed;
+    //top: 1;
+    width: 100%;
+    z-index: +1;
+}
+td
+{
+    background-color: lightgray;
+}
+
 .catalog{
+    position: relative;
     display: flex;
     flex-wrap: wrap;
+    padding-top: 25px;
 }
 
 .product{
     display: flex;
     width: 33%;
     flex-direction: column;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    align-items: middle;
 }
+
 
     

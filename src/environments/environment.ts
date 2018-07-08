@@ -11,7 +11,7 @@ export const environment = {
   delCartURL:     "http://localhost:8080/carts/rem",
   authUrl:        "http://localhost:8080/users/auth", 
   getUsersUrl:    "http://localhost:8080/users", 
-  addUserUrl:     "http://localhost:8080/users/add", 
+  postUserUrl:    "http://localhost:8080/users/add", 
   delUserUrl:     "http://localhost:8080/users/remove", 
   loginUrl:       "http://localhost:8080/users/login"
 };

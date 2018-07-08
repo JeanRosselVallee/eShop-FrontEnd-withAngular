@@ -1,21 +1,24 @@
-<input [(ngModel)]="nom" />
-<input [(ngModel)]="prix" />
+<table id="frozenTable">
+        <td>
+                Search:<input [(ngModel)]="nom" />
+        </td>
+        <td>
+                Filter prices under:<input [(ngModel)]="prix" />
+        </td>
+</table>
 
 <div class="catalog">
 
+        <app-product-thumb  class="product"
+                            (addToCart)="addToCart($event)"
+                            *ngFor="let current of catalog | alpha:nom | price:prix"
+                            [data]="current" >
+        </app-product-thumb>
 
 
-    <app-product-thumb  class="product"
-                        (addToCart)="addToCart($event)"
-                        *ngFor="let current of catalog | alpha:nom | price:prix"
-                        [data]="current" >
-    </app-product-thumb>
-
-
-    <!-- error messages-->
-    <textarea id="errorArea" cols=50 rows=5 style="color:red">
-        Error messages go here
-    </textarea>
-    
-
+        <!-- error messages-->
+        <textarea id="errorArea" cols=50 rows=5 style="color:red">
+            Error messages go here
+        </textarea>
+        
 </div>

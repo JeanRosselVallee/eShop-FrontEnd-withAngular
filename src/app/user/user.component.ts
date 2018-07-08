@@ -50,6 +50,14 @@ export class UserComponent implements OnInit {
     );
   }
 
+  public postUserHandler():void{
+    this.service.postUser(this.user).then(
+      () => {
+        this.ngOnInit();
+      }
+    );
+  }
+
   ngOnInit() {
 
     if  ( sessionStorage.getItem("apikey") != "null" &&

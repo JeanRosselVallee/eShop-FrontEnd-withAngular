@@ -90,7 +90,7 @@ export class UserService {
     let options:RequestOptions = new RequestOptions();
     options.headers = headers;
 
-    return this.service.post(environment.addUserUrl, body, options).map(
+    return this.service.post(environment.postUserUrl, body, options).map(
       (rep:Response):boolean => {
           let data:any = rep.json();
 
@@ -146,9 +146,7 @@ export class UserService {
   public getCurrentUser(): User {
     return this.currentUser;
   }
-
-
-
+  
   public auth(p_email: string, p_password: string): Observable<User> {
 
     let body: URLSearchParams = new URLSearchParams();
@@ -190,6 +188,39 @@ export class UserService {
 
   }
 
+  public postUser( p_User:User ):Promise<Object>{
 
+    let promise:Promise<Object> = null;
+    let body:URLSearchParams = new URLSearchParams();
+    let headers:Headers = new Headers(
+      {"Content-Type":"application/x-www-form-urlencoded"}
+    );
+    let options:RequestOptions = new RequestOptions();
+
+    body.set("email", p_User.email);
+    body.set("name", p_User.name);
+    body.set("password", p_User.password);
+
+    options.headers = headers;
+
+    promise = this.service.post(
+                              environment.postUserUrl,
+                              body,
+                              options
+                            )
+                            .toPromise()
+                            .then(
+                              ( rep:Response ):Object => {
+                                return rep.json();
+                              }
+                            )
+                            .catch(
+                              (error:any): Promise<any> => {
+                                return Promise.reject(error);
+                              }
+                            );
+
+    return promise;
+  }
 
 }

@@ -1,8 +1,9 @@
-#freeze
+#frozenTable
 {
     position: fixed;
     top: 0;
-    width: 100%
+    width: 100%;
+    z-index: +2;
 }
 
 .menu
@@ -61,6 +62,9 @@ img
 
 #content
 {
-    padding-top: 250px;
+    padding-top: 235px;
 }
 
+body{
+    background-color: lightgray;
+}

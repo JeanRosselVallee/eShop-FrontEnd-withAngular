@@ -32,6 +32,69 @@
     </tr>    
 </table>
 <br>
+
+<h2>Create an account:</h2>
+<table id="createUser">
+        <tr>
+            <td> 
+                <tr>
+                    <td>
+                        E-mail  : 
+                      </td>
+                      <td>
+                        <input [(ngModel)]="user.email" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Name : 
+                      </td>
+                      <td>
+                        <input [(ngModel)]="user.name" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password : 
+                      </td>
+                      <td>
+                        <input [(ngModel)]="user.password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Apikey  : 
+                      </td>
+                      <td>
+                        <input [(ngModel)]="user.apikey" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        is admin? : 
+                      </td>
+                      <td>
+                        <input [(ngModel)]="user.admin" />
+                    </td>
+                </tr>
+            </td>
+            <td>
+                <a routerLink="/admin/users">
+                    <button (click)="postUserHandler()" >
+                        <img
+                            src="https://t3.ftcdn.net/jpg/00/31/32/06/500_F_31320699_UcSaUXDKycDWMjrYF3pPq7wGbwbmNZXi.jpg"    
+                            alt="Submit"
+                            width=60px
+                        >
+                    </button>
+                </a>
+            </td>
+        </tr>    
+    </table>
+    <br>	
+
+
+
 <br>
 <table id="userTable">
     <tr id="tableHeader">

@@ -1,5 +1,31 @@
-<h2>{{data.title}}</h2>
-<img src="{{data.url}}" />
-<p>Prix: {{data.price}}€</p>
-<a routerLink="/catalog/{{data.id}}">Details</a>
-<button (click)="clickButton()">Add To Cart</button>
+<table>
+        <tr>
+                <td>
+                        <p>{{data.title}}</p>
+                </td>
+                <td>
+                        <h2>{{data.price}}€</h2>
+                        <a routerLink="/catalog/{{data.id}}">Details</a>
+                </td>                
+        </tr>   
+        <tr>             
+                <td id="productColumn">
+                        <img    id="productImage"
+                                src="{{data.url}}" 
+                                alt="Product picture"
+                        />
+                </td>
+                <td>
+                        <button 
+                                (click)="clickButton()"
+                                title="Add To Cart"
+                        >
+                        <img    
+                                src="https://images.all-free-download.com/images/graphicthumb/button_add_89666.jpg"
+                                alt="+"
+                                width=50%
+                        />
+                        </button>
+                </td>
+        </tr>
+</table>
