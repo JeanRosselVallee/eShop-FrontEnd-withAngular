@@ -126,11 +126,16 @@ export class CartService {
     let options:RequestOptions  = new RequestOptions();
     options.params              = new URLSearchParams();
 
-    options.params.set("id", p_product.id.toString());
-    options.params.set("api", "azerty123");
+    options.params.set("product_id", p_product.id.toString());
+
+    let p_apikey:string = sessionStorage.getItem("apikey") ;
+    options.params.set("apikey", p_apikey);
+
+    let p_cart_id:string = sessionStorage.getItem("cart_id") ;
+    options.params.set("cart_id", p_cart_id);      
 
     promise = this.service.delete(
-      environment.delCartURL,
+      environment.delCartProdURL,
       options
     )
       .toPromise()

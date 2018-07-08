@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product, PRODUCT_MOCK } from '../bean/product';
 import { Http, Response, Headers, URLSearchParams, RequestOptions } from '@angular/http';
-import {environment}  from '../../environments/environment';
+import { environment }  from '../../environments/environment';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable({
@@ -128,8 +128,10 @@ export class ProductService {
     let options:RequestOptions  = new RequestOptions();
     options.params              = new URLSearchParams();
 
-    options.params.set("id", p_product.id.toString());
-    options.params.set("api", "azerty123");
+    options.params.set("product_id", p_product.id.toString());
+
+    let p_apikey:string = sessionStorage.getItem("apikey") ;
+    options.params.set("apikey", p_apikey );
 
     promise = this.service.delete(
                               environment.delCatalogURL,

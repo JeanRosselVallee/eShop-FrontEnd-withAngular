@@ -18,7 +18,6 @@ import { AdminProductComponent } from './admin-product/admin-product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { UserService }      from './service/user.service';
 import { UserComponent } from './user/user.component';
-import { WorkInProgressComponent } from './work-in-progress/work-in-progress.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +30,7 @@ import { WorkInProgressComponent } from './work-in-progress/work-in-progress.com
     CartComponent,
     AdminProductComponent,
     ProductDetailComponent,
-    UserComponent,
-    WorkInProgressComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,7 @@ export const environment = {
   getCartURL:     "http://localhost:8080/carts/get-cart-by-id",
   getCartIdURL:   "http://localhost:8080/carts/get-cart-id",
   delCartURL:     "http://localhost:8080/carts/rem",
-  //delCartProdURL: "http://localhost:8080/carts/remove-product",
+  delCartProdURL: "http://localhost:8080/carts/remove-product",
   //getAllCartsURL: "http://localhost:8080/carts/all",
   authUrl:        "http://localhost:8080/users/auth", 
   getUsersUrl:    "http://localhost:8080/users", 
