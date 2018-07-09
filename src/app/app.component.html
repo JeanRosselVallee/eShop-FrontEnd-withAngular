@@ -28,7 +28,8 @@
                     <div class="menu">
                         <div class="viewByAll" *ngIf="isAdmin!='true'"> 
                                 <td>
-                                    <a routerLink="user">
+                                    <!--a routerLink="user"-->
+                                    <a routerLink="login">
                                             <button> 
                                                     <h3>My Account</h3>
                                                     <img 
@@ -66,7 +67,7 @@
                         </div>
                         <div class="viewByAdmin" *ngIf="isAdmin=='true'">  
                                 <a routerLink="admin/catalog"><button>  Admin Catalog </button></a>
-                                <a routerLink="admin/carts">  <button>  Admin Carts </button></a>
+                                <a routerLink="pending">  <button>  Admin Carts </button></a>
                                 <a routerLink="admin/users">  <button>  All Users </button></a>
                         </div>
                     </div>

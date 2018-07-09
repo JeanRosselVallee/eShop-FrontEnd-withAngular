@@ -18,6 +18,7 @@ import { AdminProductComponent } from './admin-product/admin-product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { UserService }      from './service/user.service';
 import { UserComponent } from './user/user.component';
+import { PendingComponent } from './pending/pending.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { UserComponent } from './user/user.component';
     CartComponent,
     AdminProductComponent,
     ProductDetailComponent,
-    UserComponent
+    UserComponent,
+    PendingComponent
   ],
   imports: [
     BrowserModule,
@@ -131,6 +133,11 @@ import { UserComponent } from './user/user.component';
         {
           path: "me",
           component: UserComponent,
+          pathMatch: 'full'
+        },
+        {
+          path: "pending",
+          component: PendingComponent,
           pathMatch: 'full'
         }
       ],
